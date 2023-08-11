@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        setTheme(R.style.Base_Theme_Swipe); //splash 추가 코드 theme_MeloMate랑 BASE_theme_Melomate랑 뭔 차이인거지?
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

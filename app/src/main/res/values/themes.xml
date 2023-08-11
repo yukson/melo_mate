@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.Swipe" parent="Base.Theme.Swipe" />
+
+    <!-- splash 추가 코드-->
+    <style name="Splash.Theme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
 </resources>
