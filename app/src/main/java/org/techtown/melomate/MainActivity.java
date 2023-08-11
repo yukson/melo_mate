@@ -50,5 +50,7 @@ public class MainActivity extends AppCompatActivity {
         DotsIndicator indicator = findViewById(R.id.dots_indicator);
 
         indicator.setViewPager2(viewPager2);
+
+        viewPager2.setCurrentItem(1);
     }
 }
