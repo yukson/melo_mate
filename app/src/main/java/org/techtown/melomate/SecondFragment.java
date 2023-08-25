@@ -19,12 +19,12 @@ import org.techtown.melomate.GetTime;
 import java.text.SimpleDateFormat;
 
 public class SecondFragment extends Fragment {
-    TextView textView2, textView16, textView17, textView18, textView19, textView20, textView21, textView22;
+    TextView textView2;
     ImageView imageView12;
     float startDegree = 0f;
     float endDegree = 0f;
     int hour = GetTime.getHour();
-    String dates = GetDate.getDate();
+    int j = 0;
 
     @Nullable
     @Override
@@ -33,8 +33,15 @@ public class SecondFragment extends Fragment {
 
         imageView12 = view.findViewById(R.id.imageView12);
 
-        textView16 = view.findViewById(R.id.textView16);
-        textView16.setText(dates);
+        for(int i = 16; i<=23; i++){
+            String tv_id = "textView" + i;
+            int res_id = getResources().getIdentifier(tv_id, "id", "org.techtown.melomate");
+            TextView textview = view.findViewById(res_id);
+            if(textview != null){
+                textview.setText(GetDate.addDate(j));
+            }
+            j++;
+        }
 
         textView2 = view.findViewById(R.id.textView2);
         textView2.setText("현재기온(" + hour + "시)");
